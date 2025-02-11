@@ -136,7 +136,7 @@ To copy the output from HDFS to your local machine:
     ```bash
     docker cp resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/output/ shared-folder/output/
     ```
-Challenges Faced & Solutions
+## Challenges Faced & Solutions
 ## Path Configuration
 ## hdfs file persmission
 Permission denied errors when copying files to HDFS
