@@ -64,7 +64,6 @@ mv target/*.jar target
 Copy the JAR file to the Hadoop ResourceManager container:
 
 ```bash
-docker cp shared-folder/input/code/<your-jar-file>.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
 docker cp target/WordCountUsingHadoop-0.0.1-SNAPSHOT.jar resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/
 ```
 
@@ -137,7 +136,6 @@ To copy the output from HDFS to your local machine:
     docker cp resourcemanager:/opt/hadoop-3.2.1/share/hadoop/mapreduce/output/ shared-folder/output/
     ```
 ## Challenges Faced & Solutions
-## Path Configuration
 ## hdfs file persmission
 Permission denied errors when copying files to HDFS
 Solution: Executed commands with proper user permissions and created directories with appropriate access rights
@@ -145,13 +143,13 @@ Solution: Executed commands with proper user permissions and created directories
 Challenge: Incorrect file paths when running in Docker container
 Solution: Used absolute paths and verified directory structure inside containers
 
-## input
+## Input
 Hadoop is a framework that allows for the distributed processing of large data sets across clusters of computers.
 Hadoop is designed to scale up from single servers to thousands of machines, each offering local computation and storage.
 Rather than rely on hardware to deliver high-availability, the library itself is designed to detect and handle failures at the application layer.
 MapReduce is a core component of the Hadoop ecosystems.
 
-## output
+## Output
 ```bash
 a       2
 across  1
